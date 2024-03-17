@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/freshcart-logo.svg">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a *ngIf="isLogin" class="nav-link" routerLink="home" routerLinkActive="text-white  bg-main rounded-pill">Home</a>
+          <a *ngIf="isLogin" class="nav-link" routerLink="brands" routerLinkActive="text-white  bg-main rounded-pill">Brands</a>
+          <a *ngIf="isLogin" class="nav-link" routerLink="categories" routerLinkActive="text-white  bg-main rounded-pill">Categories</a>
+          <a *ngIf="isLogin" class="nav-link" routerLink="cart" routerLinkActive="text-white  bg-main rounded-pill">Cart</a>
+          <a *ngIf="isLogin" class="nav-link" routerLink="products" routerLinkActive="text-white  bg-main rounded-pill">Products</a>
+          <a *ngIf="isLogin" class="nav-link" routerLink="WishList" routerLinkActive="text-white  bg-main rounded-pill">Wish List</a>
+        </div>
+        <div class="d-flex gap-3 align-items-center">
+          <i class="fa-brands fa-facebook"></i> 
+          <i class="fa-brands fa-youtube"></i> 
+          <i class="fa-brands fa-instagram"></i> 
+          <i class="fa-brands fa-behance"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          
+          <i routerLink="cart" class="fa-solid fa-cart-arrow-down text-main cursor-pointer"></i>
+          
+          <a *ngIf="!isLogin" class="nav-link" routerLink="login" routerLinkActive="text-white  bg-main rounded-pill">Login</a>
+          <a *ngIf="!isLogin" class="nav-link" routerLink="register" routerLinkActive="text-white  bg-main rounded-pill">Register</a>
+          <a *ngIf="isLogin" (click)="logout()" class="nav-link cursor-pointer">LogOut</a>
+        </div>
+      </div>
+    </div>
+  </nav>

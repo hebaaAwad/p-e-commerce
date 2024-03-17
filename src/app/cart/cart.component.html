@@ -1,0 +1,19 @@
+
+<div *ngFor="let item of CartItem" class="row">
+    <div class="col-md-3">
+        <img>
+    </div>
+    
+    <div class="col-md-7">
+        <h1>{{item.title}}</h1>
+        <span>{{item.category.name}}</span>
+        <span>Price : {{item.price}}</span>
+    </div>
+
+    <div class="col-md-2">
+        <i class="fa-solid fa-square-plus"></i>
+        
+        <i class="fa-solid fa-square-minus"></i>
+    </div>
+
+</div>
